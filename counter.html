@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Counter App </title>
+                <style>
+            body {
+                background: linear-gradient(135deg, orange, #ff6666);
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+                display: flex;
+                justify-content: center;
+            }
+
+            #counter-container {
+                width: 20% ;
+                margin : 0 auto;
+                height : 40vh;
+                text-align: center;
+                padding: 90px;
+                border-radius: 90px;
+                background-color: #f0f0f0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            input[type="text"] {
+                font-size: 74px;
+                padding: 30px;
+                width: 100px;
+                text-align: center;
+                border: gray;
+                border-bottom: 10px solid #ddd;
+                outline: none;
+                background-color: transparent;
+            }
+
+            input[type="text"]:hover {
+                border-color: #999;
+            }
+
+            #buttons button {
+                padd
+                font-size: 18px;
+                padding: 10px 20px;
+                margin: 0 5px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                transition: background-color 0.3s ease;
+            }
+
+            #buttons button:hover {
+                background-color: #45a049;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        
+        <script >
+            let count = 0;
+            function add(){
+                count++;
+                document.getElementById("counter").value = count;
+            }
+            function sub(){
+                count--;
+                if (count < 0){
+                    return count=0;
+                }
+                document.getElementById("counter").value = count;
+            }
+            function reset(){
+                count = 0;
+                document.getElementById("counter").value =count ;
+            }
+        </script>
+        <h1>Counter App</h1>
+        <div id="counter-container">
+            <input type= "text" id="counter" value="0" readonly>
+            
+           <div id="buttons">
+            <br/>
+            <br/>
+                <button type="button" onClick="add();">+1 </button>
+                
+                <button type="button" onClick="sub();">-1 </button>
+                <button type="button" onClick="reset();">reset </button>
+                <br/>
+                <br/>
+                
+                <br/>
+                <a href="https://github.com/salmankhani-sk/Counterapp" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </body>
+</html>
